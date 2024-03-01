@@ -1,31 +1,22 @@
 Task
 
-For each integer  in the interval  (given as input) :
+Given a positive integer denoting , do the following:
 
-If , then print the English representation of it in lowercase. That is "one" for , "two" for , and so on.
-Else if  and it is an even number, then print "even".
-Else if  and it is an odd number, then print "odd".
+If , print the lowercase English word corresponding to the number (e.g., one for , two for , etc.).
+If , print Greater than 9.
 Input Format
 
-The first line contains an integer, .
-The seond line contains an integer, .
+The first line contains a single integer, .
 
 Constraints
 
-
 Output Format
 
-Print the appropriate English representation,even, or odd, based on the conditions described in the 'task' section.
-
-Note: 
+If , then print the lowercase English word corresponding to the number (e.g., one for , two for , etc.); otherwise, print Greater than 9 instead.
 
 Sample Input
 
-8
-11
+5
 Sample Output
 
-eight
-nine
-even
-odd
+five
