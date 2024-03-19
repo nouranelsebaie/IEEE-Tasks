@@ -17,20 +17,34 @@ int main()
 
     return 0;
 }
-
-
 int isArmstrong(int num)
 {
-    int temp, q, sum;
-
+    int temp, rem, sum;
+    int count = 0;
+	int mul=1;
+	int cnt;
     temp = num;
     sum = 0;
-
+    while(temp!=0)
+	{
+	temp=temp/10;
+    count++;	
+	}
+	temp = num;
+	cnt=count;
     while(temp != 0)
     {
-        q = temp % 10;
-        sum += q * q * q;
-        temp /= 10;
+        rem = temp % 10;
+		while(cnt!=0)
+		{
+			mul=mul*rem;
+			cnt--;
+		}
+		sum+=mul;
+        temp/=10;
+		cnt=count;
+		mul=1;
+		
     }
 
     if(num == sum)
@@ -43,13 +57,9 @@ int isArmstrong(int num)
 void printArmstrong(int start, int end)
 {
 
-    while(start <= end)
-    {
-        if(isArmstrong(start))
-        {
-            printf("%d, ", start);
-        }
-
-        start++;
+    
+    for (int i = start; i <= end; i++) {
+        if (isArmstrong(i))
+            printf("%d ", i);
     }
 }

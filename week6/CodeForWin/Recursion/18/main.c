@@ -1,31 +1,30 @@
 
 #include <stdio.h>
 
-unsigned long long fact(int num);
-
+int fact(int num);
 
 int main()
 {
     int num;
-    unsigned long long factorial;
-    
-
+    int factorial;
     printf("Enter any number: ");
     scanf("%d", &num);
-    
     factorial = fact(num); 
-    
-    printf("Factorial of %d is %llu", num, factorial);
+    printf("Factorial of %d is %d", num, factorial);
     
     return 0;
 }
 
 
-unsigned long long fact(int num)
+int fact(int num)
 {
-
     if(num == 0) 
         return 1;
-    else
-        return num * fact(num - 1);
+    else if(num < 0)
+	{ 
+	 return num * fact(num + 1);	
+	}
+	else
+		 return num * fact(num - 1);
+       
 }
