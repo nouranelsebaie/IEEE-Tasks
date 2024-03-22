@@ -1,0 +1,1 @@
+C program to get nth bit of a number

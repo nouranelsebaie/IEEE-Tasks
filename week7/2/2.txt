@@ -1,0 +1,1 @@
+C program to check Most Significant Bit (MSB) of a number is set or not
