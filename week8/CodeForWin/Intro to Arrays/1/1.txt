@@ -1,0 +1,1 @@
+Write a C program to declare, initialize, input elements in array and print array.
