@@ -1,0 +1,1 @@
+C program to search element in array using pointers
